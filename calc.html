@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="designcb.css">
+    <style>
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid rgba(0, 0, 0, 0.429);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .intro {
+            padding: 20px;
+        }
+
+        .fin {
+            padding: 20px;
+            height: 250px;
+            text-align: justify;
+            line-height: 1.5;
+            text-indent: 25px;
+        }
+
+        .textimc {
+            text-align: justify;
+            line-height: 1.5;
+            text-indent: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Meu primeiro Site</h1>
+        <p class="cab">100% desenvolvido com Html, Css e Javascript</p>
+    </header>
+
+    <section class="menu">
+        <a href="index.html">Home</a>
+        <a href="calc.html">Calculadora IMC 1</a>
+        <a href="pg3.html">Consulta de Voto</a>
+    </section>
+    <div class="containerr">
+        <section class="intro">
+            <h2>O que é IMC?</h2><br>
+            <p class="textimc">O IMC, Índice de Massa Corporal, é um indicador do peso ideal que relaciona altura e peso
+                corporal. A
+                calculadora de IMC fornece o valor do índice de cada pessoa e permite a classificação.
+
+                Desde 1995, o conceito implementado pelo fisiologista Ancel Keys é adotado pela Organização Mundial de
+                Saúde
+                (OMS) como uma fórmula simples para avaliar se uma pessoa está no peso considerado ideal para sua
+                estatura
+                ou não.
+
+                O índice também serve como referência para o nível de obesidade ou baixo peso que pode orientar
+                pesquisas
+                diversas e o trabalho de diferentes profissionais da saúde, como a taxa de obesidade no país calculada
+                pelo
+                Ministério da Saúde no Brasil.
+
+                Como explicamos, ele envolve uma fórmula simples que pode direcionar um olhar mais cuidadoso para a
+                saúde,
+                mas deve ser complementado por outros tipos de avaliação. Afinal, o peso corporal pode ser constituído
+                de
+                formas diferentes.
+
+                Por exemplo, o IMC alto indicará sobrepeso tanto para uma pessoa com altos níveis de tecido gorduroso
+                quanto
+                para quem tem grande volume massa muscular, se essas pessoas tiverem o mesmo peso e altura.
+
+                Essa é uma das limitações do cálculo, mas ele ainda pode facilitar diagnósticos e o dia a dia de
+                profissionais diversos.</p>
+        </section>
+        <hr><br>
+        <header class="topo">
+            <h2>Calculadora IMC</h2><br><br>
+            <p style="margin-top: -20px;">Preencha para saber seu Índice de Massa Corporal</p>
+        </header>
+        <section class="calc">
+            <strong>Digite seu peso atual:</strong> <input class="pes" type="number" name="txtpeso" id="txtpeso">
+            <br><br><strong>Digite sua altura (não use , use .):</strong> <input class="altu" type="number"
+                name="txtaltu" id="txtaltu">
+            <input class="botao" type="button" value="Calcular" onclick="calcularIMC()"><br><br>
+            <div id="resultado" class="resultado">
+                <!-- Aqui será exibido o resultado do IMC -->
+            </div>
+        </section>
+        <hr><br>
+
+        <section class="tabela" style="display: none;">
+            <table id="tabelaIMC">
+                <tr class="tr1">
+                    <td>IMC Adulto</td>
+                    <td>Classificação</td>
+                </tr>
+                <tr>
+                    <td>Menor que 18,5</td>
+                    <td>Baixo peso</td>
+                </tr>
+                <tr>
+                    <td>18,5 - 24,9</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr>
+                    <td>25,0 - 29,9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td>30,0 - 34,9</td>
+                    <td>Obesidade grau I</td>
+                </tr>
+                <tr>
+                    <td>35,0 - 39,9</td>
+                    <td>Obesidade grau II</td>
+                </tr>
+                <tr>
+                    <td>Maior ou igual a 40,0</td>
+                    <td>Obesidade grau III (mórbida)</td>
+                </tr>
+            </table>
+
+        </section>
+
+        <script src="/js/codigo_1.js"></script>
+
+        <section class="fin">
+            <h2>Como é calculado o IMC?</h2><br>
+            <p>O Índice de Massa Corporal é calculado por meio de uma fórmula simples: o peso (kg) dividido pela altura
+                (m)
+                ao quadrado:
+
+                peso (kg) ÷ altura (m) ²=IMC
+
+                Para ficar mais claro, imagine que uma pessoa que pesa 70 kg e mede 1,70 m quer saber o IMC dela. <br>
+                <br>Para isso, o cálculo a se fazer seria:
+                70 ÷ 170²=24,22 assim, o índice dessa pessoa é de 24,22.
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina2</title>
+    <link rel="stylesheet" href="designcb.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Meu primeiro Site</h1>
+        <p class="cab">100% desenvolvido com Html, Css e Javascript</p>
+    </header>
+    <section class="menu">
+        <a href="index.html">Home</a>
+        <a href="calc.html">Calculadora IMC 1</a>
+        <a href="pg3.html">Consulta de Voto</a>
+    </section>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: antiquewhite;
+        }
+
+        .topo {
+            background-color: chocolate;
+            padding: 5px;
+            height: 120px;
+            text-align: center;
+        }
+
+        .Menu {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .Menu a {
+            color: chocolate;
+            padding: 15px 20px;
+            float: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .Menu :hover {
+            color: white;
+            font-size: 17px;
+        }
+
+        .cont {
+            padding: 20px;
+        }
+
+        h1 {
+            color: chocolate;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            background-color: #000000;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Sistema de votos no Brasil</h1>
+        <p><i><strong>Verifique se você já pode votar</strong></i></p>
+    </header>
+    <nav class="Menu">
+        <a href="index.html">Home</a>
+        <a href="calc-Imc.html">Calcular IMC 2</a>
+        <a href="votar.html">Você vai Votar?</a>
+
+    </nav>
+
+    <section class="cont">
+        Digite sua idade <input type="number" nome="idad" id="idad">
+        <input type="button" value="Consultar" onclick="consulta()">
+        <div id="res">
+        </div>
+
+        <script>
+            function consulta() {
+                var idd = window.document.querySelector('input#idad')
+                var rer = window.document.querySelector('div#res')
+                var idda = Number(idd.value)
+                if (idda < 16) {
+                    res.innerHTML = `<p>Sua idade é ${idda} você não precisa votar ainda</p>`
+                } else if (idda < 18) {
+                    res.innerHTML = `<p>Sua idade é ${idda} seu voto é opcional</p >`
+                } else if (idda >= 18) {
+                    res.innerHTML = `<p>Sua idade é ${idda} seu voto é obrigatório</p >`
+                }
+            }
+        </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Par ou Ímpar</title>
+</head>
+
+<body>
+    <h1>Verificador de Par ou Ímpar</h1>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero">
+    <button onclick="parimpar()">Consultar</button>
+    <p id="resultado"></p>
+
+    <script src="aula16.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 6 js</title>
+
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Exercício</h1>
+        <p style="margin-top: -20px;"><strong>Calculadora IMC</strong></p>
+    </header>
+    <nav class="Menu">
+        <a href="index.html">Home</a>
+        <a href="calc-Imc.html">Calcular IMC 2</a>
+        <a href="votar.html">Você vai Votar?</a>
+
+    </nav>
+    <section class="calc">
+        <STRONG>Digite seu peso atual:</STRONG> <input type="number" name="txtpeso" id="txtpeso">
+        <br><br><STRONG> Digite sua altura:</STRONG> <input type="number" name="txtaltu" id="txtaltu">
+        <input type="button" value="Calcular" onclick="calcular()">
+        <div id="res">
+        </div>
+
+        <script>
+            function calcular() {
+                var txtpes = window.document.querySelector('input#txtpeso')
+                var txtalt = window.document.querySelector('input#txtaltu')
+                var res = window.document.querySelector('div#res')
+                var pesoo = Number(txtpes.value)
+                var n1 = Number(txtalt.value)
+                var im = pesoo / (n1 * n1)
+                res.innerHTML = `<p>Seu IMC é ${im}</p >`
+
+            }
+        </script>
+    </section>
+
+
+</body>
+
+</html>
